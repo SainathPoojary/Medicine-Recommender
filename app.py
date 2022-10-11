@@ -10,6 +10,16 @@ app=Flask(__name__)
 def index():
     return render_template("index.html")
 
+
+@app.route('/recommend')
+def recom():
+    return render_template("Recommender.html")
+
+
+@app.route('/result')
+def result():
+    return render_template("Result.html")
+
 @app.route('/predict',methods=["POST"])
 def prediction():
     symptoms = request.get_json()["data"]
