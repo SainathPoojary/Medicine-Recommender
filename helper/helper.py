@@ -9,7 +9,7 @@ model = pickle.load(open("model.pkl","rb"))
 def predict(feature_values):
     disease = dict()
     disease["disease"] = predictDisease(feature_values)
-    disease["precaution"] = list(getPrecaution(disease["disease"]))
+    disease["precautions"] = list(getPrecaution(disease["disease"]))
     disease["medicine"] = getMedicine(disease["disease"])
 
     return json.dumps(disease)
