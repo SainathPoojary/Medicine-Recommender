@@ -1,7 +1,6 @@
 import json
 import pickle
 import pandas as pd
-import os.path
 
 model = pickle.load(open("model.pkl","rb"))
 

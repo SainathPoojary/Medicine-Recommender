@@ -145,7 +145,7 @@ let maxtag = 16;
 countTag();
 function countTag() {
   count.innerHTML = maxtag - tags.length;
-  if (tags.length < 1) {
+  if (tags.length < 4) {
     sbut.disabled = true;
   } else {
     sbut.disabled = false;
