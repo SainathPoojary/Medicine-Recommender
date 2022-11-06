@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 
 from helper.helper import predict
 
-import json
+import os
 
 app=Flask(__name__)
 
@@ -26,5 +26,5 @@ def prediction():
     return predict(symptoms)
 
 
-if __name__=="__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
