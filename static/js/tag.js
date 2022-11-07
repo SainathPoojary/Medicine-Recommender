@@ -142,9 +142,11 @@ let sym = symp.sort();
 
 let tags = [];
 let maxtag = 16;
+let mintag=3;
 countTag();
 function countTag() {
-  count.innerHTML = maxtag - tags.length;
+  c = mintag - tags.length;
+  count.innerHTML = c>0?c:0;
   if (tags.length < 3) {
     sbut.disabled = true;
   } else {
