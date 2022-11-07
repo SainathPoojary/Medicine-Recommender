@@ -62,11 +62,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Creating a p tag
     let p = document.createElement("p");
     // Fill Disease
-    p.innerText = data.disease;
+    p.innerText = "According to the Symptoms You Entered There is Chance Of You Having "+data.disease;
     diseaseDiv.append(p);
     // Fill Medicine
     p = document.createElement("p");
-    p.innerText = data.medicine;
+    p.innerText = "As per Your Disease, We Recommend You To Take "+ data.medicine+" By Consulting Your Family Doctor";
     medicineDiv.append(p);
     // Fill Precaution
     let ul = document.createElement("ul");

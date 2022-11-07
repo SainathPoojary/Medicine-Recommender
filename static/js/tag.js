@@ -145,7 +145,7 @@ let maxtag = 16;
 countTag();
 function countTag() {
   count.innerHTML = maxtag - tags.length;
-  if (tags.length < 4) {
+  if (tags.length < 3) {
     sbut.disabled = true;
   } else {
     sbut.disabled = false;
@@ -175,7 +175,7 @@ function addTag(e) {
   removeList();
   for (let i of sym) {
     if (
-      i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+      i.toLowerCase().includes(input.value.toLowerCase()) &&
       input.value != "" &&
       !tags.includes(i)
     ) {
